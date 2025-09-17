@@ -36,9 +36,13 @@ Languages & Libraries: Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
 
 ## Key Results (test set)
 | Model | Accuracy | F1-score (test) | Notes |
+
 | GaussianNB | **88.3%** | **0.489** | Best F1 among the four — better at identifying positives than others. |
+
 | MultinomialNB | **80.4%** | **0.410** | Moderate performance. |
+
 | ComplementNB | **77.2%** | **0.384** | Lower recall on minority class. |
+
 | BernoulliNB | **90.4%** | **0.000** | High accuracy but predicted only majority class _ F1=0 for minority (class imbalance issue). |
 
 **Interpretation:** BernoulliNB’s high accuracy is misleading due to class imbalance. GaussianNB provided the best balance (higher F1). For imbalanced targets, prefer metrics like F1, recall or precision-recall curves.
